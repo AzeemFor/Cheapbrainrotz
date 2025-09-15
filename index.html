@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0f1c;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Blurred floating bubbles */
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(0, 123, 255, 0.4);
+      filter: blur(20px);
+      animation: float 20s infinite;
+    }
+
+    .bubble:nth-child(1) {
+      width: 200px; height: 200px;
+      top: 20%; left: 15%;
+      animation-duration: 25s;
+    }
+    .bubble:nth-child(2) {
+      width: 300px; height: 300px;
+      bottom: 10%; right: 20%;
+      animation-duration: 30s;
+    }
+    .bubble:nth-child(3) {
+      width: 150px; height: 150px;
+      top: 60%; left: 40%;
+      animation-duration: 18s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-50px); }
+      100% { transform: translateY(0); }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .glow-button {
+      display: inline-block;
+      padding: 20px 40px;
+      background: #007bff;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 123, 255, 0.9), 0 0 50px rgba(0, 123, 255, 0.6);
+      position: relative;
+    }
+
+    .glow-button h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: white;
+      letter-spacing: 3px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background bubbles -->
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <!-- Main content -->
+  <div class="content">
+    <div class="glow-button">
+      <h1>COMMING SOON</h1>
+    </div>
+  </div>
+</body>
+</html>
